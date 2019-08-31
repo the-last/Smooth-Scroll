@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smooth-scroll</title>
+    <style>
+        .hello {
+            width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: left;
+        }
+        p {
+            display: flow-root;
+            position: relative;
+            border-bottom: 1px solid rgba(200, 200, 200, .5);
+            min-height: 40px;
+            line-height: 40px;
+            color: #FF4C4C;
+        }
+        p > span, p > button{
+            float: right;
+            display: block;
+            width: 300px;
+            white-space: normal;
+            font-weight: 700;
+            color: green;
+            text-align: left;
+            word-break: break-all;
+
+        }
+        button {
+            display: inline-block;
+            border-radius: 2px;
+            height: 36px;
+            line-height: 36px;
+            cursor: pointer;
+        }
+
+        .fullSpan {
+            display: inline-block;
+            width: 100%;
+            height: 70px;
+            line-height: 100px;
+            border-bottom: 1px solid gray;
+        }
+    </style>
+    <script src="../index.js"></script>
+    <script>
+        function scrollsmooth(scope) {
+            smoothScroll( typeof scope === "number" ? scope : "" || document.getElementById('bottom01'), null, 500);
+        }
+    </script>
+</head>
+<body>
+    <div class="hello">
+        <button onclick="scrollsmooth()" style="color: 'red'">平滑滚动 --> 底部</button>
+
+        <p style="background-color: 'white'">
+            <span  class="fullSpan">我特别高</span>
+            <span  class="fullSpan">我特别高</span>
+            <span  class="fullSpan">我特别高</span>
+            <span  class="fullSpan">我特别高</span>
+            <span  class="fullSpan">路过的路人甲-</span>
+            <span  class="fullSpan">我特别高</span>
+            <span  class="fullSpan">我特别高</span>
+            <span  class="fullSpan">我特别高</span>
+            <span  class="fullSpan">我特别高</span>
+            <span  class="fullSpan">我特别高</span>
+            <span  class="fullSpan">我特别高</span>
+        </p>
+        <p id="bottom01"><span>我在底部</span></p>
+        <button onclick="scrollsmooth(-100)">到顶部平滑滚动</button>
+    </div>
+</body>
+
+</html>

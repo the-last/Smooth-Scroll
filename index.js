@@ -62,6 +62,3 @@ function smoothScroll(targetDOM, callback, duration) {
 
 }
 
-export default {
-    smoothScroll,
-}
