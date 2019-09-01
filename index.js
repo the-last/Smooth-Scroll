@@ -26,10 +26,10 @@ function jump (i, durationItem) {
 /**
  *  实现到节点的平滑滚动，完成后回调函数
  *  @param {Any}  DOM结点 或 number(小数会转为整数) 要求在滚动范围内 否则默认值 0，超过文档流最大高度静默失败。
- *  @param {Function} callback 回调函数
  *  @param {Number} duration 从滚动开始到结束滚动的时间， 单位ms
+ *  @param {Function} callback 回调函数
  **/
-function smoothScroll(targetDOM, callback, duration) {
+function smoothScroll(targetDOM, duration, callback) {
     duration ? duration : DURATION;
     // 支持输dom节点，或具体滚动的大小
     let targetDomTop    = typeof targetDOM === 'object' ? targetDOM.offsetTop :
